@@ -54,3 +54,8 @@ logicka = True
 l2 = False
 
 llll = logicka and l2 or logicka
+lllllllll = logicka * l2 + logicka
+
+print(type(logicka))
+
+print(not logicka)
