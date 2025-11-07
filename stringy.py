@@ -22,23 +22,16 @@ for i in range(5):
 print(c)
 
 promenna = "Ahoj Karle, jak se máš?"
-
 print(promenna[6])  # indexovani od 0 !!!
 print(len(promenna))
 for i in range(len(promenna)):
     print(promenna[i])
-
 print(promenna[len(promenna)-1])
 print(promenna[-1])
-
 print(promenna[5:10:2])
 print(promenna[10:5:-2])
-
 print(promenna[5:])
-
 print(promenna[:5])
-
 print(promenna[:5:-1])
 print(promenna[::-1])
-
 print(promenna.index(","))
