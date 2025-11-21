@@ -75,9 +75,6 @@ for i in range(len(pole)-1, -1, -1):
 print(nove_pole)
 
 
-
-
-
 nove_pole = []
 
 for i in range(len(pole)):
