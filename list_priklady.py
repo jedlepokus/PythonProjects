@@ -38,7 +38,7 @@ for i in range(len(pole)):
 
 print(soucet/len(pole))
 
-# priklad 3: Zjistěte, kolik prvků v poli je větších než 5.
+# priklad 4: Zjistěte, kolik prvků v poli je větších než 5.
 
 pole = [5, 2, 9, 1, 7, 3, 10, 6, 4]
 
@@ -64,7 +64,7 @@ for i in range(len(pole)):
 
 print("soucet prvku v listu je " + str(soucet))
 
-# Vytvořte nové pole, které bude obsahovat prvky v obráceném pořadí.
+# příklad 7: Vytvořte nové pole, které bude obsahovat prvky v obráceném pořadí.
 
 pole = [5, 2, 9, 1, 7, 3, 1, 6, 4]
 nove_pole = []
@@ -86,3 +86,75 @@ nove_pole = []
 nove_pole = pole[::-1]
 
 print(nove_pole)
+
+# priklad 8: dve pole se stejnzm pocetem prvku, secist prvek po prvku
+pole = [5, 2, 9, 1, 7, 3, 10, 6, 4]
+pole2 = [3, 5, 4, 7, 5, 3, 4, 5, 10]
+pole_vysledne = []
+
+for i in range(len(pole)):
+  pole_vysledne.append(pole[i] + pole2[i])
+
+print(pole_vysledne)
+
+
+
+
+# priklad 8.5: pole sectete v opacnem poradi (0 - last, 1 - last-1, ...)
+pole_vysledne = []
+for i in range(len(pole)):
+  pole_vysledne.append(pole[i] + pole2[-i-1])
+
+print(pole_vysledne)
+
+# prikald 9: najdete druhy nejvetsi prvek v poli
+
+pole = [15, 7, 13, 4, 12, 10, 14, 11, 7]
+max = -1000
+druhy = -1000
+# alternativni incializace:
+if len(pole) >= 2:
+    if pole[0] > pole[1]:
+        max = pole[0]
+        druhy = pole[1]
+    else:
+        max = pole[1]
+        druhy = pole[0]
+# for i in range(2, len(pole))
+
+for i in range(len(pole)):
+    if pole[i] > max:
+        druhy = max
+        max = pole[i]
+    elif pole[i] > druhy:
+        druhy = pole[i]
+
+print(max)
+print(druhy)
+
+# prikald 10: zjistete zda je pole serazene
+pole = [15, 7, 13, 4, 12, 10, 14, 11, 7]
+je = True
+for i in range(len(pole)-1):
+    if pole[i] > pole[i+1]:
+        je = False
+        break
+if je:
+    print("je")
+else:
+    print("neni")
+
+
+# priklad bonus:
+
+sude = 0
+liche = 0
+for i in range(len(pole)):
+    if pole[i] % 2 == 0:
+        sude += 1
+    else:
+        liche +=1
+
+print(sude)
+print(liche)
+
