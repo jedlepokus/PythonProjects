@@ -18,7 +18,19 @@ def kvadraticka(a, b, c):
         x1 = (-b + D**(1/2)) / (2 * a)
         x2 = (-b - D**(1/2)) / (2 * a)
         return [x1, x2]
+#print(kvadraticka(1,2,1))
+#print(kvadraticka(1,3,1))
+#print(kvadraticka(1,1,1))
 
-print(kvadraticka(1,2,1))
-print(kvadraticka(1,3,1))
-print(kvadraticka(1,1,1))
+
+def kvadratic_test():
+    results=[]
+    for i in range(5):
+        results.append(kvadraticka(1,i,1))
+    return results
+
+vysledky = kvadratic_test()
+for vysledek in vysledky:
+    print(vysledek)
+
+
